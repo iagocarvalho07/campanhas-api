@@ -1,0 +1,31 @@
+dn: dc=pm,dc=ba,dc=gov,dc=br
+objectclass: top
+objectclass: domain
+objectclass: extensibleObject
+dc: pm
+
+dn: ou=Usuarios,dc=pm,dc=ba,dc=gov,dc=br
+objectclass: top
+objectclass: organizationalUnit
+ou: Usuarios
+
+dn: ou=Grupos,dc=pm,dc=ba,dc=gov,dc=br
+objectclass: top
+objectclass: organizationalUnit
+ou: Grupos
+
+dn: uid=usuario.teste,ou=Usuarios,dc=pm,dc=ba,dc=gov,dc=br
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Usuario Teste
+sn: Teste
+uid: usuario.teste
+userPassword: {SHA}nU4eI71bcnBGqeO0t9tXvY1u5oQ=
+
+dn: cn=ADMIN,ou=Grupos,dc=pm,dc=ba,dc=gov,dc=br
+objectclass: top
+objectclass: groupOfNames
+cn: ADMIN
+member: uid=usuario.teste,ou=Usuarios,dc=pm,dc=ba,dc=gov,dc=br
